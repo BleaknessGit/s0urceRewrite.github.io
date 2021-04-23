@@ -1,0 +1,45 @@
+site_name: s0urce.io Protocol
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.expand
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - def_list
+nav:
+  - Client Packets:
+    - signIn: client/signIn.md
+    - playerRequest:
+      - playerRequest: client/playerRequest/playerRequest.md
+      - tasks:
+        - All Tasks: client/playerRequest/tasks/index.md
+        - 100: client/playerRequest/tasks/100.md
+        - 102: client/playerRequest/tasks/102.md
+        - 103: client/playerRequest/tasks/103.md
+        - 104: client/playerRequest/tasks/104.md
+        - 105: client/playerRequest/tasks/105.md
+        - 106: client/playerRequest/tasks/106.md
+        - 300: client/playerRequest/tasks/300.md
+        - 666: client/playerRequest/tasks/666.md
+        - 777: client/playerRequest/tasks/777.md
+  - Server Packets:
+    - prepareClient: server/prepareClient.md
+    - mainPackage:
+      - mainPackage: server/mainPackage/mainPackage.md
+      - tasks:
+        - All Tasks: server/mainPackage/tasks/index.md
+        - 333: server/mainPackage/tasks/333.md
+        - 2000: server/mainPackage/tasks/2000.md
+        - 2002: server/mainPackage/tasks/2002.md
+        - 2003: server/mainPackage/tasks/2003.md
+        - 2004: server/mainPackage/tasks/2004.md
+        - 2005: server/mainPackage/tasks/2005.md
+        - 2006: server/mainPackage/tasks/2006.md
+        - 2007: server/mainPackage/tasks/2007.md
+        - 2008: server/mainPackage/tasks/2008.md
+        - 2009: server/mainPackage/tasks/2009.md
+        - 2010: server/mainPackage/tasks/2010.md
+        - 3001: server/mainPackage/tasks/3001.md
