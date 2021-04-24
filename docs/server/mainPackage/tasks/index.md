@@ -1,5 +1,5 @@
 - [Hacking Word Response](333.md)
-- [Hacking Client Start](2000.md)
+- [Add Message To Log](2000.md)
 - [Start Hacking](2002.md)
 - [Show Message](2003.md)
 - [Hacking Player Charges Update](2004.md)
