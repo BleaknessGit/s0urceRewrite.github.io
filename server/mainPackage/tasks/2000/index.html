@@ -834,12 +834,12 @@
                   <h1>2000</h1>
                 
                 <h2 id="name">Name</h2>
-<p>Hacking Client Start Task</p>
+<p>Add Message To Log Task</p>
 <h2 id="description">Description</h2>
-<p>Used to tell the Client of an incoming Hack<br>
-Sent when the Client is being hacked</p>
+<p>Used to add a predefined message to Log<br>
+Sent when something is added to Log</p>
 <h2 id="raw-packet">Raw Packet</h2>
-<p><code>42["mainPackage",{"unique":[{"task":2000,"data":{"type":0,"id":"pcJrcE0MStEWlpHCAAMa","name":"el hackos","port":0}}]}]</code></p>
+<p><code>42["mainPackage",{"unique":[{"task":2000,"data":{"type":0,"id":"pcJrcE0MStEWlpHCAAMa","name":"el hackos","port":0,"amount":0.689}}]}]</code></p>
 <h2 id="json">JSON</h2>
 <div class="highlight"><pre><span></span><code><span class="p">[</span>
     <span class="s2">&quot;mainPackage&quot;</span><span class="p">,</span>
@@ -851,7 +851,8 @@ Sent when the Client is being hacked</p>
                     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
                     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;pcJrcE0MStEWlpHCAAMa&quot;</span><span class="p">,</span>
                     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;el hackos&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                    <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mf">0.689</span>
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">]</span>
@@ -899,25 +900,31 @@ Sent when the Client is being hacked</p>
 <td>type</td>
 <td>Number</td>
 <td>0</td>
-<td>Message Type<br>Always set to 0</td>
+<td>Message Type<br>0 = Incoming Hack<br>1 = Successful Hack<br>2 = Can't Find Target</td>
 </tr>
 <tr>
 <td>id</td>
 <td>Number/String</td>
 <td>pcJrcE0MStEWlpHCAAMa</td>
-<td>Player ID<br>Type is a Number if the Player is a Bot otherwise a String</td>
+<td>Player ID<br>Type is a Number if the Player is a Bot otherwise a String<br>Only sent if type == 0</td>
 </tr>
 <tr>
 <td>name</td>
 <td>String</td>
 <td>el hackos</td>
-<td>Player Username</td>
+<td>Player Username<br>Only sent if type == 0</td>
 </tr>
 <tr>
 <td>port</td>
 <td>Number</td>
 <td>0</td>
-<td>Port ID<br>0 = A, 1 = B, 2 = C</td>
+<td>Port ID<br>0 = A, 1 = B, 2 = C<br>Only sent if type == 0</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Number</td>
+<td>0.689</td>
+<td>BTC Amount<br>Only sent if type == 1</td>
 </tr>
 </tbody>
 </table>
